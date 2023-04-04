@@ -1,0 +1,101 @@
+.backstage {
+  background-image: url("../../assets/images/flower_foto1.png");
+  background-repeat: no-repeat;
+  background-position: right 12px;
+
+  padding-top: 140px;
+  padding-bottom: 140px+36px;
+  color: $black_blue;
+
+  @media screen and (max-width: $desktop) and (min-width: $tablet) {
+    background-image: none;
+    padding-top: 100px;
+    padding-bottom: 140px;
+  }
+  @media screen and (max-width: $tablet) {
+    picture {
+      display: none;
+    }
+
+    background-size: 150px;
+    background-position: 104% -5px;
+
+    padding-top: 59px;
+    padding-bottom: 80px;
+    margin-right: 20px;
+  }
+  @media screen and (max-width: $mobile) {
+    background-size: 20%;
+    background-position: 90vw -15px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .container-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: $desktop) {
+      gap: 31px;
+      // img {
+      //   object-fit: cover;
+      //   width: 455px;
+      // }
+    }
+    @media screen and (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      box-sizing: border-box;
+      padding-right: 17vw;
+    }
+    @media screen and (max-width: $mobile) {
+      padding-right: 0;
+    }
+  }
+
+  .h2 {
+    font-size: 3rem;
+    margin: 0;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 1.5rem;
+    }
+  }
+  .text {
+    font-family: $FontDefault;
+    line-height: 130%;
+    margin: 20px 0;
+
+    @media screen and (max-width: $mobile) {
+      margin: 10px 0;
+    }
+  }
+  .subtitle {
+    font-size: 1.5rem;
+    margin: 34px 0;
+  }
+  .text-body {
+    margin: 0;
+  }
+}
+
+.backstage__wrapper {
+  display: flex;
+  flex-direction: column;
+  // width: 50%;
+  box-sizing: border-box;
+  padding-left: 87px;
+  @media screen and (max-width: $desktop) {
+    padding-left: 0;
+  }
+  @media screen and (max-width: $tablet) {
+    .subtitle {
+      margin: 13px 0 18px 3px;
+    }
+  }
+  @media screen and (max-width: $mobile) {
+    padding-right: 5%;
+    .subtitle {
+      margin: 10px 0 10px 3px;
+    }
+  }
+}

@@ -1,0 +1,210 @@
+.testimonials {
+  background-image: url("../../assets/images/leav_foto.png");
+  background-repeat: no-repeat;
+  background-position: right (bottom -135px);
+  box-sizing: border-box;
+  padding-bottom: 180px;
+
+  @media screen and (max-width: $desktop) {
+    background-size: 20vw;
+    background-position: right (bottom -9vw);
+    padding-bottom: 143px;
+  }
+  @media screen and (max-width: $tablet) {
+    background-size: 20vw;
+    background-position: 81vw 117%;
+    padding-bottom: 80px;
+  }
+  @media screen and (max-width: $mobile) {
+    background-size: 19vw;
+    background-position: 81vw 107%;
+    padding-bottom: 55px;
+  }
+
+  .container-content {
+    margin-top: 140px-36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .btn_corner {
+      align-self: flex-start;
+    }
+    @media screen and (max-width: $desktop) {
+      margin-top: 66px;
+    }
+    @media screen and (max-width: $tablet) {
+      margin-top: 20px;
+      .btn_corner {
+        align-self: center;
+        width: 237px;
+      }
+    }
+    @media screen and (max-width: $mobile) {
+      margin-top: 0;
+    }
+  }
+  .h3 {
+    text-align: center;
+    font-size: 2.25rem;
+    color: $black_blue;
+    @media screen and (max-width: $mobile) {
+      font-size: 1.5rem;
+    }
+  }
+  .cards {
+    display: flex;
+    align-self: flex-start;
+
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: 1fr;
+
+    gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 21px;
+    height: 391px;
+    transition: 0.5s ease-in-out;
+
+    @media screen and (max-width: $desktop) {
+      margin-top: -5px;
+      // grid-template-rows: 1fr;
+      // grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: $tablet) {
+      display: grid;
+      grid-template-rows: 1fr;
+      // grid-template-columns: repeat(3, 1fr);
+      align-self: initial;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 109px);
+      gap: 15px;
+      height: 370px;
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+    @media screen and (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.testimonials .card,
+.popup .card {
+  box-sizing: border-box;
+  padding: 15px 15px 19px 16px;
+  display: grid;
+  height: 391px;
+  border-radius: 20px;
+  width: 267px;
+
+  overflow: hidden;
+  border: 2px transparent solid;
+  background: $orange border-box;
+  background-image: linear-gradient($gray_light, $gray_light), $pink_gradient;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "img title"
+    "text text";
+  gap: 10px;
+  .card_ava {
+    grid-area: img;
+  }
+  .card__title {
+    grid-area: title;
+    .title__wrapper {
+      display: flex;
+      gap: 5px;
+      color: $gray_txt;
+      font-size: 15px;
+    }
+  }
+  .card__text {
+    grid-area: text;
+    overflow: auto;
+    overflow-y: hidden;
+    color: $gray;
+    font-size: 15px;
+  }
+  .subtitle,
+  .smallParagraph {
+    margin: 0;
+  }
+}
+
+.testimonials .card {
+  @media screen and (max-width: $desktop) {
+    padding: 11px 15px 16px 11px;
+    width: 293px;
+  }
+  @media screen and (max-width: $tablet) {
+    height: auto;
+    width: 100%;
+    padding: 11px 15px 10px 11px;
+  }
+}
+
+.slider {
+  border: 0.5px transparent solid;
+  background: $orange border-box;
+  background-image: linear-gradient(#f5f7f6, #f5f7f6), $pink_gradient;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  height: 8px;
+  width: 52%;
+  border-radius: 5px;
+  margin-bottom: 31px;
+
+  @media screen and (max-width: $desktop) {
+    width: 390px;
+    margin-bottom: 45px;
+  }
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+input[type="range"] {
+  background-color: #f5f7f6;
+
+  //   display: block;
+  //   padding: 0 0.1em;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: $orange3;
+
+  border-radius: 5px;
+  cursor: pointer;
+  width: 12.5%;
+  height: 8px;
+  -webkit-appearance: none;
+  //   margin-top: -4px;
+}
+input[type="range"]:focus {
+  outline: transparent; /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  // background-color: $white;
+  padding: 20px;
+}
+
+.popup.active {
+  display: inherit;
+}
+.popup__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

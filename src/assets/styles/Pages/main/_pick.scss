@@ -1,0 +1,161 @@
+.pick__container {
+  margin-top: 69px;
+  margin-bottom: 100px;
+  @media screen and (max-width: $desktop) {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    .pick__wrapper_txt {
+      margin-left: 48px;
+      margin-right: 48px;
+    }
+    .h3 {
+      margin-top: 15px;
+      margin-bottom: 40px;
+    }
+  }
+  @media screen and (max-width: $tablet) {
+    margin-top: 19px;
+    margin-bottom: 25px;
+    .pick__wrapper_txt {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .h3 {
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (max-width: $tablet) {
+    .text_bold,
+    .text {
+      display: none;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .pick__wrapper_txt {
+      margin: 0;
+    }
+    .h3 {
+      font-size: 24px;
+      margin-top: 0px;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+.pick {
+  .container-content {
+    padding-bottom: 59px;
+    @media screen and (max-width: $desktop) {
+      padding-bottom: 45px;
+
+      .h2 {
+        margin-bottom: 0px;
+        margin-top: 1.6rem;
+      }
+      .subtitle {
+        margin-bottom: 20px;
+      }
+    }
+    @media screen and (max-width: $tablet) and (min-width: $mobile) {
+      padding-bottom: 55px;
+      width: 100%;
+      .h2 {
+        margin-top: 0.8rem;
+      }
+      .subtitle {
+        margin-top: 20px;
+        font-size: 22px;
+      }
+    }
+  }
+  .cards {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px-16px;
+    @media screen and (max-width: $desktop) {
+      margin-bottom: 55px;
+    }
+    @media screen and (max-width: $tablet) {
+      gap: 42px;
+      position: relative;
+      margin-left: -10px;
+      margin-bottom: 23px;
+    }
+    @media screen and (max-width: $mobile) {
+      gap: 10px;
+      flex-direction: column;
+      .text-body {
+        height: 54px;
+      }
+    }
+  }
+  .card__img_cont {
+    width: 168px;
+    height: 168px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px transparent solid;
+    background: $orange border-box;
+    background-image: linear-gradient(white, white), $orange;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 168px;
+    @media screen and (max-width: $mobile) {
+      gap: 0;
+      .text-body {
+        margin: 5px 0;
+      }
+    }
+  }
+  .arrow {
+    // justify-self: start;
+    align-self: start;
+    margin-top: 60px;
+    @media screen and (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    .arrow_green {
+      display: none;
+    }
+  }
+  @media screen and (max-width: $tablet) {
+    .arrow_green {
+      top: -18px;
+      position: absolute;
+    }
+    .arrow_green_r {
+      left: calc(50% + 168px / 2 - 35px);
+    }
+    .arrow_green_l {
+      left: calc(168px - 35px);
+    }
+  }
+  @media screen and (max-width: $mobile) {
+    .arrow_green {
+      left: 85%;
+      rotate: 85deg;
+    }
+    .arrow_green_r {
+      top: calc(168px + 23px);
+    }
+    .arrow_green_l {
+      top: calc(2 * 168px + 105px);
+    }
+  }
+}

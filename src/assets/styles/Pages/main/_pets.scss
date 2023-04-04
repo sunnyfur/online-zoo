@@ -1,0 +1,272 @@
+.pets {
+  background-image: url("../../assets/images/palm_foto1.png"),
+    url("../../assets/images/strelitzia.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, right bottom;
+  //   margin-top: 180px;
+  padding-bottom: 100px;
+  @media screen and (max-width: $desktop) {
+    // background-size: 20vw 20vw;
+    background-image: url("../../assets/images/palm_foto2.png"),
+      url("../../assets/images/strelitzia1.png");
+    padding-bottom: 140px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    background-image: url("../../assets/images/palm_foto3.png"),
+      url("../../assets/images/strelitzia3.png");
+    padding-bottom: 97px;
+  }
+  @media screen and (max-width: $tablet) {
+    background-image: url("../../assets/images/palm_foto2.png"),
+      url("../../assets/images/strelitzia1.png");
+    background-size: 23vw 25vw, 25vw 20vw;
+    background-position: -5vw 100.5%, 80vw 100%;
+    padding-bottom: 60px;
+  }
+
+  .container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    position: relative;
+
+    @media screen and (max-width: $tablet) {
+      gap: 60px;
+    }
+    @media screen and (max-width: $mobile) {
+      gap: 20px;
+    }
+  }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    // overflow: hidden;
+  }
+  .carousel__container {
+    display: flex;
+    width: 100%;
+    height: 876px;
+    overflow: hidden;
+    position: relative;
+
+    @media screen and (max-width: $desktop) {
+      height: 805px;
+    }
+    @media screen and (max-width: $tablet) {
+      height: 756px;
+    }
+    @media screen and (max-width: $mobile) {
+      height: auto;
+    }
+  }
+  .text-btn {
+    margin: 0;
+    @media screen and (max-width: $tablet) {
+      font-size: 13px;
+    }
+  }
+
+  .to-left {
+    animation: 1s ease-in-out;
+    animation-name: left;
+  }
+
+  .to-right {
+    animation: 1s ease-in-out;
+    animation-name: right;
+    animation-direction: reverse;
+  }
+
+  .from-left {
+    animation: 1s ease-in-out;
+    animation-name: left;
+    animation-direction: reverse;
+  }
+  .from-right {
+    animation: 1s ease-in-out;
+    animation-name: right;
+  }
+
+  @keyframes left {
+    from {
+      left: 0;
+    }
+    to {
+      left: -104%;
+    }
+  }
+  @keyframes right {
+    from {
+      left: 104%;
+    }
+    to {
+      left: 0%;
+    }
+  }
+
+  .smallParagraph {
+    margin: -2px 0 0 0;
+    font-size: 15px;
+    @media screen and (max-width: $tablet) {
+      font-size: 12px;
+    }
+  }
+
+  .btn_round {
+    position: absolute;
+    top: calc(50% - 32px);
+  }
+  .btn_round_right {
+    right: -20px-60px;
+  }
+  .btn_round_left {
+    left: -20px-62px;
+  }
+  .text-body {
+    font-size: 14px;
+  }
+  @media screen and (max-width: $desktop) {
+    .btn_round_right {
+      right: calc(50% - 145px);
+    }
+    .btn_round_left {
+      left: calc(50% - 145px);
+    }
+    .cards {
+      grid-gap: 92px 30px;
+    }
+  }
+  @media screen and (max-width: $tablet) {
+    .btn_round_right {
+      right: calc(50% - 76px);
+    }
+    .btn_round_left {
+      left: calc(50% - 76px);
+    }
+  }
+  @media screen and (max-width: $mobile) {
+    .btn_round {
+      display: none;
+    }
+  }
+
+  .cards.active,
+  .cards.next {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    @media screen and (min-width: $desktop) {
+      gap: 20px 30px;
+    }
+    @media screen and (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      overflow: hidden;
+      height: 756px;
+    }
+    @media screen and (max-width: $mobile) {
+      position: relative;
+      padding-right: 15px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+
+      height: 1388px;
+      row-gap: 20px;
+    }
+  }
+
+  .cards {
+    display: none;
+    width: 100%;
+    position: absolute;
+  }
+
+  .card {
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px transparent solid;
+    background: $orange border-box;
+    background-image: linear-gradient(white, white), $orange;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    height: 426px;
+    position: relative;
+    @media screen and (max-width: $desktop) {
+      height: 354px;
+    }
+    @media screen and (max-width: $tablet) {
+      height: 330px;
+    }
+    &:hover {
+      .card__img {
+        transform: scale(1.1);
+        filter: brightness(70%);
+      }
+      .card__descr {
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .card__img {
+    border-radius: 5px 5px 0 0;
+    transition: 0.5s ease-in-out;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    min-height: 88%;
+    object-fit: cover;
+  }
+  .card__descr {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: $white;
+    transition: 1s ease-in-out;
+    transform: translateY(0);
+
+    //   height: 60px;
+    z-index: 2;
+    padding: 4px 13px 12px 16px;
+    bottom: -50px;
+    width: 100%;
+    @media screen and (max-width: $tablet) {
+      padding: 4px 13px 12px 10px;
+    }
+  }
+  .card__icon {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .card__icon_veg {
+    background-image: url("../../assets/icons/banana-bamboo_icon.svg");
+    width: 33px;
+    height: 37px;
+    top: 10px;
+    right: 13px;
+
+    @media screen and (max-width: $tablet) {
+      width: 25px;
+      height: 28px;
+      top: 7px;
+      right: 10px;
+    }
+  }
+
+  .card__icon_meat {
+    background-image: url("../../assets/icons/meet-fish_icon.svg");
+    width: 48px;
+    height: 38px;
+    top: 8px;
+    right: 8px;
+    @media screen and (max-width: $tablet) {
+      width: 37px;
+      height: 29px;
+    }
+  }
+}

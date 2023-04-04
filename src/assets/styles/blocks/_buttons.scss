@@ -1,0 +1,72 @@
+.btn_orange {
+  color: $white;
+  background: $orange;
+  transition: color 0.3s ease-in-out;
+  width: 298px;
+  height: 54px;
+  cursor: pointer;
+  &:hover {
+    background: $orange_hover;
+  }
+  &:active {
+    background: $green;
+  }
+}
+.btn_orange:disabled {
+  background: $gray;
+}
+
+.btn_rconer {
+  padding-left: 5px;
+  padding-right: 1px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: none;
+  width: 298px;
+  height: 54px;
+  text-align: center;
+}
+.btn_corner {
+  border-radius: 5px;
+  border: none;
+}
+
+.btn_round {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: none;
+}
+// .btn_round_right {
+//   background-image: url("../../assets/icons/arrow.svg");
+// }
+.btn_white {
+  padding: 9px 39px;
+  box-sizing: border-box;
+  color: $black;
+  border: 1px solid $black;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    color: $green;
+    border: 1px solid $green;
+  }
+  &:active {
+    background: $green;
+    color: $white;
+  }
+}
+
+.input_default {
+  border-radius: 2px;
+  background: transparent;
+  color: $white;
+  border: solid 1px $orange3;
+  width: 228px;
+
+  padding: 10px;
+  box-sizing: border-box;
+  &::placeholder {
+    color: $white;
+  }
+}

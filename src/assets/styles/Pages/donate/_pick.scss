@@ -1,0 +1,429 @@
+.pick__container {
+  margin-top: 60px;
+  margin-bottom: 185px;
+  .h2 {
+    text-align: center;
+    margin-left: -12px;
+  }
+  .subtitle {
+    align-self: flex-start;
+    margin: 12px 0;
+  }
+  .btn_rconer {
+    margin-bottom: 12px;
+  }
+
+  @media screen and (max-width: $desktop) {
+    margin-top: 40px;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  @media screen and (max-width: $tablet) {
+    margin-top: 30px;
+
+    margin-bottom: 25px;
+  }
+}
+.pick {
+  .container-content {
+    @media screen and (max-width: $desktop) {
+      padding-bottom: 30px;
+    }
+    @media screen and (max-width: $tablet) {
+      padding-bottom: 20px;
+    }
+    @media screen and (max-width: $mobile) {
+      padding-bottom: 0px;
+    }
+  }
+  // .h3 {
+  //   @media screen and (max-width: $tablet) {
+  //     font-size: 24px;
+  //   }
+  // }
+  .pick__subtitle {
+    @media screen and (max-width: $tablet) {
+      font-size: 24px;
+    }
+  }
+  .pick__title {
+    @media screen and (max-width: $mobile) {
+      font-size: 24px;
+    }
+  }
+}
+
+.pick__title {
+  color: $orange3;
+  align-self: flex-start;
+  margin: 0;
+}
+.pick__subtitle {
+  margin-top: 40px;
+  margin-bottom: 0;
+  color: $white;
+  align-self: flex-start;
+  @media screen and (max-width: $desktop) {
+    margin-right: 100px;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: $tablet) {
+    margin-top: 30px;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  @media screen and (max-width: $mobile) {
+    margin-top: 25px;
+  }
+}
+.pick__text {
+  color: $white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  font-family: $FontMedium;
+  margin: 10px 0 45px 0;
+  align-self: flex-start;
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: $mobile) {
+    font-family: $FontDefault;
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+  span {
+    font-family: $FontDefault;
+    font-weight: 400;
+  }
+}
+
+.pick__form {
+  padding: 0 92px 40px 92px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: $desktop) and (min-width: $tablet) {
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-bottom: 0;
+    .subtitle {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+  @media screen and (max-width: $tablet) {
+    padding: 0;
+    .subtitle {
+      text-align: center;
+    }
+    .h2 {
+      margin-top: 30px;
+      margin-left: 0;
+      font-size: 48px;
+    }
+  }
+  @media screen and (max-width: $mobile) {
+    .h2 {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+    .subtitle {
+      font-size: 16px;
+      margin: 0;
+      line-height: 140%;
+    }
+    .text-body {
+      font-size: 15.9px;
+    }
+  }
+}
+
+.panda {
+  margin-top: 50px;
+  margin-left: -12px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 5px;
+  grid-template-areas:
+    ". . pand"
+    "inp mult pand"
+    "labl . pand ";
+  // align-items: center;
+  @media screen and (max-width: $desktop) {
+    margin-top: 35px;
+  }
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 14px;
+  }
+  @media screen and (max-width: $mobile) {
+    margin-left: 0px;
+    width: 100%;
+    grid-template-columns: 1fr 0.4fr 1.8fr;
+    margin-bottom: -10px;
+    margin-top: 10px;
+  }
+}
+
+.input_count {
+  grid-area: inp;
+  align-self: flex-end;
+
+  border: none;
+  background-color: transparent;
+  width: 82px;
+  justify-self: center;
+  text-align: center;
+  font-family: $FontMedium;
+  font-size: 72px;
+  line-height: 80%;
+  font-weight: 500;
+  -webkit-appearance: none;
+  @media screen and (max-width: $mobile) {
+    font-size: 41px;
+  }
+}
+.label_count {
+  grid-area: labl;
+  justify-self: center;
+  font-family: $FontDefault;
+  line-height: 120%;
+  font-weight: 400;
+  @media screen and (max-width: $mobile) {
+    font-size: 9px;
+  }
+}
+.panda__x {
+  grid-area: mult;
+  align-self: center;
+  justify-self: start;
+  margin: 5px 0 0 5px;
+  @media screen and (max-width: $mobile) {
+    width: 8px;
+    margin: 5px 0 0 0px;
+  }
+}
+.panda__img {
+  width: 100%;
+  grid-area: pand;
+}
+
+.progr__scale {
+  height: 27px;
+  width: 100%;
+  background-color: #404950;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+  color: $black_blue;
+  span {
+    font-size: 22px;
+  }
+  @media screen and (max-width: $mobile) {
+    height: 13.5px;
+    span {
+      font-size: 10px;
+    }
+  }
+}
+.progr__bar {
+  height: 2px;
+  background-color: #72828e;
+  width: 93%;
+  @media screen and (max-width: $mobile) {
+    width: 88%;
+  }
+}
+.progr__radios {
+  position: absolute;
+  left: 0;
+  top: 38px;
+  width: 106.5%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  justify-content: flex-start;
+  @media screen and (max-width: $desktop) {
+    width: 124.5%;
+  }
+  @media screen and (max-width: $tablet) {
+    width: 184.5%;
+  }
+  @media screen and (max-width: $mobile) {
+    top: 18px;
+    width: 174.5%;
+    left: 10px;
+  }
+
+  input[type="radio"] {
+    display: none;
+    position: relative;
+    width: 72px;
+
+    cursor: pointer;
+  }
+  label {
+    position: relative;
+    font-size: 26px;
+    font-family: $FontMedium;
+    line-height: 140%;
+    font-weight: 500;
+    cursor: pointer;
+    padding-top: 40px;
+    @media screen and (max-width: $mobile) {
+      padding-top: 25px;
+      font-size: 13px;
+    }
+  }
+  label:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: 26px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: $yellow;
+    border: 10px transparent;
+    @media screen and (max-width: $mobile) {
+      width: 5px;
+      height: 5px;
+      left: 10px;
+    }
+  }
+
+  input[type="radio"]:checked + label:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 26px - 15px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-image: url("../../assets/icons/round1.svg"),
+      url("../../assets/icons/round2.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    @media screen and (max-width: $mobile) {
+      width: 20px;
+      height: 20px;
+      top: 0px;
+      left: 26px - 23.5px;
+      background-image: url("../../assets/icons/round11.svg"),
+        url("../../assets/icons/round21.svg");
+    }
+  }
+  input[type="radio"]:checked + label {
+    color: $orange3;
+  }
+}
+
+.amount__text {
+  align-self: flex-start;
+  margin: 0 0 15px 4px;
+  @media screen and (max-width: $tablet) {
+    margin: 5px 0 10px 10px;
+  }
+  @media screen and (max-width: $mobile) {
+    margin: 0 0 10px 4px;
+  }
+}
+
+.form__period {
+  display: flex;
+  gap: 75px;
+  margin: 25px 0 30px 10px;
+}
+
+.amount__input {
+  width: 268px;
+  height: 54px;
+  border: 1px solid #929699;
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: 16px 9px;
+  position: relative;
+  background-color: transparent;
+
+  background-image: url("../../assets/icons/dollar.svg");
+  background-position: (right 10px) center;
+  background-repeat: no-repeat;
+
+  margin-top: 50px;
+  @media screen and (max-width: $tablet) {
+    margin-top: 45px;
+    width: 180px;
+    height: 45px;
+  }
+  @media screen and (max-width: $mobile) {
+    margin-top: -2px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: $desktop) {
+  .bar__field:nth-of-type(1) {
+    display: none;
+  }
+}
+@media screen and (max-width: $tablet) {
+  .bar__field:nth-of-type(2),
+  .bar__field:nth-of-type(3) {
+    display: none;
+  }
+}
+
+.period__field {
+  input[type="radio"] {
+    display: none;
+    position: relative;
+  }
+  label {
+    position: relative;
+    cursor: pointer;
+  }
+  label:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    left: -25px;
+
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 1px $orange3 solid;
+    background-color: transparent;
+  }
+  input[type="radio"]:checked + label:after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+
+    left: -25px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 1px $green solid;
+    background-color: $green;
+  }
+}
+
+.nav {
+  @media screen and (max-width: $desktop) {
+    // margin-left: -7px;
+    margin-left: 8px;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
